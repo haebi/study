@@ -7,6 +7,7 @@
 @import "components/nav-bar.css";
 @import "components/screen-header.css";
 @import "components/user-component.css";
+@import "components/badge.css";
 
 /* Screens */
 @import "screens/login.css";
@@ -35,3 +36,6 @@ body {
     opacity: 0.8;
 }
 
+.main-screen {
+    padding: 0 var(--horizontal-space);
+}
