@@ -111,21 +111,23 @@
 }
 
 .reply input {
-    padding: 12px;
+    padding: 14px;
     width: 100%;
     border: var(--main-border);
-    border-radius: 20px;
+    border-radius: 25px;
+    box-sizing: border-box;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
     position: absolute;
-    right: -3px;
-    top: 2px;
+    right: 7px;
+    top: 7px;
 }
 
 .reply__column:last-child > i {
-    right: 40px;
+    right: 50px;
+    top: 15px;
 }
 
 .reply__column  button {
