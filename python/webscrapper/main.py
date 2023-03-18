@@ -1,7 +1,15 @@
-from bs4 import BeautifulSoup
-from requests import get
+# pip install requests beautifulsoup4 selenium
+
+from extractors.indeed import extract_indeed_jobs
 from extractors.wwr import extract_wwr_jobs
 
-# Refactor
-jobs = extract_wwr_jobs("python")
-print(jobs)
+keyword = input("What do you want to search for?")
+
+indeed = extract_indeed_jobs(keyword)
+wwr = extract_wwr_jobs(keyword)
+
+jobs = indeed + wwr
+
+for job in jobs:
+    print(job)
+    print("////////\n////////")
