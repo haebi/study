@@ -9,17 +9,15 @@ def get_page_count(keyword):
     # Replit
     # options.add_argument("--no-sandbox")
     # options.add_argument("--disable-dev-shm-usage")
+
     browser = webdriver.Chrome(options=options)
     browser.get(base_url)
 
     soup = BeautifulSoup(browser.page_source, "html.parser")
-    # pagination = soup.find("ul", class_="pagination-list")
     pagination = soup.find("nav", class_="css-jbuxu0")
     if pagination == None:
         return 1
 
-    # print(pagination)
-    # pages = pagination.find_all("li", recursive=False)
     pages = pagination.find_all("div", recursive=False)
     count = len(pages)
     if count >= 5:

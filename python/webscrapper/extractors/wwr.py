@@ -38,4 +38,5 @@ def extract_wwr_jobs(keyword):
                     'position': title.string.replace(",", " ")
                 }
                 results.append(job_data)
+
         return results
